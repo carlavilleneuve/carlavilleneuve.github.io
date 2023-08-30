@@ -1,7 +1,7 @@
 let autocomplete;
 
 console.log("Reading places.js");
-
+initAutoComplete();
 
 function initAutoComplete() {
     autocomplete = new google.maps.places.Autocomplete(
