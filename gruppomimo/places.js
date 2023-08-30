@@ -1,8 +1,6 @@
 let autocomplete;
 
-console.log("okok");
-console.log("okok");
-console.log("okok");
+console.log("Reading places.js");
 
 
 function initAutoComplete() {
