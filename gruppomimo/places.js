@@ -5,7 +5,7 @@ console.log("okok");
 console.log("okok");
 
 
-/* function initAutoComplete() {
+function initAutoComplete() {
     autocomplete = new google.maps.places.Autocomplete(
         document.getElementById('adress-input'),
         {
@@ -13,7 +13,7 @@ console.log("okok");
             fields: [name, geometry]
         });
     
-        //autocomplete.addListener('place_changed', onPlaceChanged);
+        autocomplete.addListener('place_changed', onPlaceChanged);
 }
 
 function onPlaceChanged() {
@@ -32,4 +32,4 @@ function onPlaceChanged() {
             distancesContainers[i].style.display="flex";
         }
     }
-} */
+}
