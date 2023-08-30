@@ -19,10 +19,10 @@ function onPlaceChanged() {
     var distancesContainers = document.getElementsByClassName('distance-to-place-container');
 
     if (!place.geometry) {
-        document.getElementById('autocomplete').placeholder = 'Tapez votre adresse, code postal, ville';
+        document.getElementById('adress-input').placeholder = 'Tapez votre adresse, code postal, ville';
         distancesContainers.forEach( (item) => item.style.display = "none");
     } else {
-        document.getElementById('details').innerHTML = place.name;
+        document.getElementById('adress-input').placeholder = place.name;
         // Calcul distances dans un array
 
         for (let i = 0; i < distancesContainers.length; i++){
