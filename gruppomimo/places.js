@@ -97,6 +97,9 @@ function onPlaceChanged() {
                 }
 
                 // Ajout du macaron le plus proche
+                Array.prototype.forEach.call(macaronsClosest, function(macaronsClosest){
+                    macaronsClosest.classList.add('hide');
+                });
                 document.getElementsByClassName('macaron-closest')[minIndex].classList.remove('hide');
                 distancesContainers[minIndex].style.display='none';
 
