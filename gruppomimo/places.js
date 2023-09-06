@@ -90,8 +90,7 @@ function onPlaceChanged() {
                 for (let i = 0; i < places.length; i++){
                     // Ajout de l'ordre d'affichage du restaurant en fonction de sa distance
                     console.log(places[i].attributes.distance.value);
-                    //places[i].style.order = parseFloat(places[i].attributes.distance.value);
-                    places[i].style.order = eval(places[i].attributes.distance.value);
+                    places[i].style.order = parseInt(places[i].attributes.distance.value);
                     console.log(places[i].style.order);
 
                     // Recherche de la plus petite valeur de distance pour affichage du macaron
