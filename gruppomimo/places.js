@@ -70,12 +70,14 @@ function onPlaceChanged() {
 
                     // Récupération de la valeur de distance dans la reponse HTTP
                     var str = response.rows[0].elements[i].distance.text
-
+                    console.log(str);
                     // Ajout de la valeur de distance dans le distance-to-place-container
                     distances[i].innerHTML = str.split(" ")[0];
+                    console.log(distances[i].innerHTML);
 
                     // Ajout d'un attribut avec la valeur de distance pour chaque restaurant pour préparer le tri
                     places[i].setAttribute('distance',distances[i].innerHTML);
+                    
                 }
 
                 // Affichage des distancesContainer
@@ -87,7 +89,9 @@ function onPlaceChanged() {
 
                 for (let i = 0; i < places.length; i++){
                     // Ajout de l'ordre d'affichage du restaurant en fonction de sa distance
+                    console.log(places[i].attributes.distance.value);
                     places[i].style.order = parseFloat(places[i].attributes.distance.value);
+                    console.log(places[i].style.order);
 
                     // Recherche de la plus petite valeur de distance pour affichage du macaron
                     if (parseFloat(places[i].attributes.distance.value) < parseFloat(minDistance)){
